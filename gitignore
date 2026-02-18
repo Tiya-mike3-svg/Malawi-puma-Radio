@@ -1,0 +1,4 @@
+#ignore all jpg 
+*jpg
+*png
+*webp

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>records</title>
+  <style>
+  body{
+  padding:100px;
+  margin:-80px;
+  background-color:black;
+  justify-content:center;
+  aligh-item:center;
+  position:absolute;
+  right:18%;
+  
+  }
+   .main{
+   background-color:white;
+   border: 2px solid white;
+  width: 800px;
+  height:1343px;
+  padding-top: 700px;
+  padding-bottom: 100px;
+   }
+  
+  .interest{
+  padding-left:460px;
+  padding-bottom:30px;
+  display:flex;
+  gap:46px;
+  font-size:19px;
+  list-style:none;
+  font-family:sans-serif;
+  }
+  .interest li:hover{
+  color:white;
+  background-color:green;
+  border-radius:50px;
+  }
+  
+  .search{
+  transform:translate(50px , 35px);
+  width:360px;
+  height:35px;
+  border: 2px solid white;
+  font-size:20px;
+  }
+  
+  .nav-link{
+  background-color:black;
+  padding-top:30px;
+  background-image:url('child.jpg');
+  }
+  
+  .logo{
+  padding-left:340px;
+  font-size:24px;
+  font-family:sans-serif;
+  }
+  
+  .box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8,.box9,.box10
+  ,.box11,.box12,.box13,.box14,.box15,.box16,.box17,.box18,.box19,.box20{
+  width:100px;
+  height:100px;
+  background-color:yellow;
+  border:2px solid black;
+  border-radius:50px;
+  cursor:pointer;
+  }
+  
+  .box1,.box2,.box3,.box4,.box5,.box8, .box10,.box12, .box13, 
+  .box14, .box15, .box16, .box17, .box18, .box19, .box20{
+  
+    background-color:blue;
+ border:2px solid black;
+   
+   }
+  
+ 
+  
+  .box{
+   display:grid;
+ gap:20px;
+ padding-left:600px;
+  }
+.box10,
+.box11 {
+  visibility: hidden;
+}
+.box1{background-image:url('zodik.jpg');}
+.box2{background-image:url('mbc1.png');}
+.box3{background-image:url('mbc02.jpg');}
+.box4{background-image:url('chanco.png');}
+.box5{background-image:url('gn.jpg');}
+.box8{background-image:url('mzati.jpg');}
+.box9{background-image:url('yoneco.png');}
+.box12{background-image:url('beyond.jpg');}
+.box13{background-image:url('nthambi.png');}
+.box14{background-image:url('zonse.jpg');}
+.box15{background-image:url('alinafe.jpg');}
+.box16{background-image:url('time.png');}
+.box17{background-image:url('maria.jpg');}
+.box18{background-image:url('mibawa.jpg');}
+.box19{background-image:url('nyimbo.jpg');}
+.box20{background-image:url('vibe.jpg');}
+
+
+.box6 {
+  position: relative;
+  right:600px;
+  bottom:700px;
+}
+
+.box6::after {
+  
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 520px;
+  height: 340px;
+  border:2px solid black;
+  border-radius:20px;
+  transition:0.6s;
+  
+  background-image: var(--slide-image);
+background-size: cover;
+background-position: center;
+  }
+  
+  .naruto{
+  display:flex;
+  gap:170px;
+  font-size:18px;
+  padding-left:30px;
+  position:relative;
+  bottom:-20px;
+  list-style:none;
+  }
+  
+  .genres{
+  transform:translate(0px ,0px);
+  list-style:none;
+  }
+  
+  .station{
+  transform:translate(0px ,-10px);
+  }
+  
+  .info{
+  padding-left:40px;
+  position:relative;
+ top:20px;
+ font-size:22px;
+ font-family:sans-serif;
+  }
+  
+  footer{
+  background-color:skyblue;
+  margin-top:190px;
+  transform:translate(0px,-2500px);
+  height:270px;
+  color:white;
+  position:relative;
+  
+  }
+  
+  .box7{
+  transform:translate(-600px,-965px);
+  border-radius:10px;
+  background-image:url('zodik.jpg'); 
+  }
+  
+  .box div {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #121212;
+}
+.playing-label {
+  position: absolute;
+  bottom: 5px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 3px 6px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #121212;
+}
+
+.music-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: none;
+  background-color: #1db954; /* Spotify green */
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.music-btn:hover {
+  background-color: #1ed760;
+}
+
+/* Play Icon */
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 0 15px 25px;
+  border-color: transparent transparent transparent white;
+  transition: all 0.3s ease;
+}
+
+/* Pause Icon */
+.music-btn.pause .icon {
+  width: 20px;
+  height: 25px;
+  border: none;
+  transform: translate(-50%, -50%);
+}
+
+.music-btn.pause .icon::before,
+.music-btn.pause .icon::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 25px;
+  background: white;
+}
+
+.music-btn.pause .icon::before {
+  left: 0;
+}
+
+.music-btn.pause .icon::after {
+  right: 0;
+}
+.music-btn{
+transform:translate(20px ,-3080px);
+height:50px;
+width:50px;
+background-color: rgba(255, 255, 255, 0.5);
+}
+
+  </style>
+  <body>
+  <div class ="main">
+  <div class ="nav-link">
+  <ul>
+  <li><a href="#">All</a></li>
+  <li><a href="#">comments</a></li>
+  <li><a href="#">about</a></li>
+  <li><a href="#">help</a></li>
+  </ul>
+  <input type ="src" class="search" placeholder="search">
+	
+  <ul class ="interest">
+  <li><a href="#">favaurate</a></li>
+  <li><a href="#">Recently listen</a></li>
+  </ul>
+  </nav>
+  </div>
+   
+   <div class ="box">
+   <div class ="box1"></div><br>
+  
+   <div class ="box2"></div><br>
+   <div class ="box3"></div> <br>
+   <div class ="box4"></div><br>
+   <div class ="box5"></div><br>
+   <div class ="box6"></div><br>
+   <div class ="box7"></div><br>
+   <div class ="box8"></div><br>
+   <div class ="box9"></div><br>
+   <div class ="box10"></div><br>
+   <div class ="box11"></div><br>
+   <div class ="box12"></div><br>
+   <div class ="box13"></div><br>
+   <div class ="box14"></div><br>
+   <div class ="box15"></div><br>
+   <div class ="box16"></div><br>
+   <div class ="box17"></div><br>
+   <div class ="box18"></div><br>
+   <div class ="box19"></div><br>
+   <div class ="box20"></div><br>
+   </div>
+<button class="music-btn" id="musicButton">
+  <span class="icon"></span>
+</button>
+   <footer>
+
+   <div class ="info">all mager malawian radio station ready for.Easy to use and 
+   100% free.</div>
+   <div class="info">
+   <div class ="fm">hello welcome to the world of nindow</div>
+   </div>
+
+  </footer>
+  </div>
+  <script>
+let images = [
+  'flag-2.jpg',
+  "music.jpg",
+  "mark.jpg",
+  "malawi02.jpg",
+  "music02.jpg",
+  "music03.jpg",
+  "top10.jpg"
+];
+
+let index = 0;
+let root = document.documentElement;
+
+function changeBackground() {
+  root.style.setProperty(
+    "--slide-image",
+    "url('" + images[index] + "')"
+  );
+
+  index++;
+
+  if (index >= images.length) {
+    index = 0;
+  }
+}
+
+changeBackground();
+setInterval(changeBackground, 13000);
+
+let boxes = document.querySelectorAll(".box div");
+let player = document.querySelector(".box7");
+
+boxes.forEach(box => {
+  box.addEventListener("click", function() {
+
+    // Remove old playing labels
+    document.querySelectorAll(".playing-label").forEach(label => {
+      label.remove();
+    });
+
+    // Get clicked image
+    let bg = window.getComputedStyle(this).backgroundImage;
+
+    // Put image in box7
+    player.style.backgroundImage = bg;
+    player.style.backgroundSize = "cover";
+    player.style.backgroundPosition = "center";
+
+    // Create Playing label
+    let label = document.createElement("div");
+    label.classList.add("playing-label");
+    label.innerText = "Playing";
+
+    // Add label to clicked box
+    this.appendChild(label);
+
+  });
+});
+const musicButton = document.getElementById("musicButton");
+
+musicButton.addEventListener("click", () => {
+  musicButton.classList.toggle("pause");
+});
+
+</script>
+  </body>
+  </html>

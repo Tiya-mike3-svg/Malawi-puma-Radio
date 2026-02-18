@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MALAWI PUMA</title>
+
+<style>
+
+/*  HUGE BODY SPACE (ONLY ADDITION) */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.box6 {
+  position: relative;       
+  width: 441px;             
+  height: 400px;            
+  margin: 0 auto;           
+}
+
+.box6::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 460px;
+  height: 300px;
+  border-radius: 20px;
+  background-image: var(--slide-image);
+  background-size: cover;
+  background-position: center;
+ 
+}
+
+
+.fm {
+  position: absolute;       
+  bottom: 10px;             
+  left: 23%;                
+  bottom:347px;
+  
+  
+  width: 446px;             
+  height: 125px;            
+  z-index: 3;
+}
+
+.fm iframe,
+.player {
+  position: absolute !important;  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: none !important;     
+  border-radius: 10px;
+  border: 2px solid black;
+  
+}
+
+
+
+body{
+padding:20px;
+margin:0px;
+background-color:black;
+justify-content:center;
+align-items:center;
+overflow-x:hidden;
+}
+
+.main{
+   background-color:white;
+   border: 2px solid white;
+   height:1430px;
+   width: 800px;
+   padding-top: 0px;   /* changed */
+   padding-bottom: 40px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.interest{
+padding-left:70px;
+padding-bottom:50px;
+transform:translate(0px , 30px);
+display:flex;
+gap:56px;
+font-size:19px;
+list-style:none;
+font-family:sans-serif;
+}
+
+.interest li:hover{
+color:white;
+background-color:green;
+border-radius:50px;
+}
+
+.search{
+transform:translate(170px , 35px);
+width:360px;
+height:35px;
+border: 2px solid white;
+font-size:20px;
+}
+
+.nav-link{
+background-color:black;
+padding-top:30px;
+background-image:url('child.jpg');
+
+}
+
+.nav-link ul{
+transform:translate(150px , 30px);
+display:flex;
+gap:40px;
+font-size:22px;
+list-style:none;
+color:yellow;
+}
+
+.nav-link ul li:hover{
+color:lightgreen;
+background-color:lightgreen;
+border-radius:30px;
+
+height:40px;
+}
+
+.logo{
+padding-left:340px;
+font-size:24px;
+font-family:sans-serif;
+}
+
+.box1,.box2,.box3,.box4,.box5,.box6,.box7,.box8,.box9,.box10
+,.box11,.box12,.box13,.box14,.box15,.box16,.box17,.box18,.box19,.box20{
+width:100px;
+height:100px;
+background-color:yellow;
+border:2px solid black;
+border-radius:50px;
+cursor:pointer;
+}
+
+.box{
+display:grid;
+grid-template-columns: repeat(8, 1fr);
+gap:40px;
+padding-left:50px;
+}
+
+.box10,
+.box11 {
+visibility: hidden;
+}
+
+.box1{background-image:url('zodik.jpg');}
+.box2{background-image:url('uwala.jpg');}
+.box3{background-image:url('mudziwatu.jpg');}
+.box4{background-image:url('chanco.png');}
+.box5{background-image:url('maria.jpg');}
+.box8{background-image:url('mulange.jpg');}
+.box9{background-image:url('yoneco.png');}
+.box12{background-image:url('mzati.jpg');}
+.box13{background-image:url('tuntu.png');}
+.box14{background-image:url('zonse.jpg');}
+.box15{background-image:url('alinafe.jpg');}
+.box16{background-image:url('time.png');}
+.box17{background-image:url('gn.jpg');}
+.box18{background-image:url('mibawa.jpg');}
+.box19{background-image:url('nyimbo.jpg');}
+.box20{background-image:url('vibe.jpg');}
+
+.box6 {
+position: relative;
+right:75px;
+bottom:10px;
+}
+
+
+.naruto{
+display:flex;
+gap:170px;
+font-size:18px;
+padding-left:30px;
+position:relative;
+bottom:-20px;
+list-style:none;
+}
+
+.genres{
+transform:translate(0px ,0px);
+list-style:none;
+}
+
+.info{
+padding-left:40px;
+position:relative;
+top:20px;
+font-size:22px;
+font-family:sans-serif;
+}
+
+footer{
+background-color:skyblue;
+margin-top:0px;
+height:330px;
+color:white;
+position:relative;
+}
+
+.box7{
+transform:translate(-250px,0px);
+border-radius:10px;
+background-image:url('zodik.jpg'); 
+}
+
+.box div {
+position: relative;
+background-size: cover;
+background-position: center;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.playing-label {
+position: absolute;
+bottom: 5px;
+background: rgba(0,0,0,0.7);
+color: white;
+padding: 3px 6px;
+font-size: 12px;
+border-radius: 5px;
+}
+
+.frame3{  }
+.frame4{  }
+.frame5{  }
+.frame6{  }
+.frame7{  }
+.frame8{  }
+.frame9{  }
+.frame10{  }
+
+@media screen and (max-width: 768px) {
+body{ overflow-x: hidden; }
+.main{
+width:800px;
+position: absolute;
+left: 50%;
+top: 50%;
+transform: translate(-46%, -46%) scale(0.50);
+transform-origin: center center;
+overflow-y:none;
+}
+}
+
+.alert{
+font-size:24px;
+font-family: 'Trebuchet MS', Helvetica, sans-serif;
+background-color:green;
+margin-top:50px;
+color:white;
+}
+
+</style>
+</head>
+<body>
+<div class ="main">
+<div class ="nav-link">
+<ul>
+<li><a href="#">All</a></li>
+<li><a href="#">comments</a></li>
+<li><a href="about.html">about</a></li>
+<li><a href="help.html">help</a></li>
+</ul>
+<input type ="src" class="search" placeholder="search">
+	
+<ul class ="interest">
+<li><a href="#">favaurate</a></li>
+<li><a href="#">Recently listen</a></li>
+</ul>
+</div>
+<div class ="logo">Malawi radio</div>
+ 
+ <div class ="box">
+ <div class ="box1"></div><br>
+ <div class ="box2"></div><br>
+ <div class ="box3"></div> <br>
+ <div class ="box4"></div><br>
+ <div class ="box5"></div><br>
+ <div class ="box6"></div><br>
+ <div class ="box7"></div><br>
+ <div class ="box8"></div><br>
+ <div class ="box9"></div><br>
+ <div class ="box10"></div><br>
+ <div class ="box11"></div><br>
+ <div class ="box12"></div><br>
+ <div class ="box13"></div><br>
+ <div class ="box14"></div><br>
+ <div class ="box15"></div><br>
+ <div class ="box16"></div><br>
+ <div class ="box17"></div><br>
+ <div class ="box18"></div><br>
+ <div class ="box19"></div><br>
+ <div class ="box20"></div><br>
+ </div>
+ <div class="alert">Radio is definitely there but it may take some time to load 
+	because of high demands to the servers. Give it a few
+	seconds and click "refresh" on your browser. However we also
+	experienced that your browser may cause the problem if
+	this is the case restart your browser completely and try again</div>
+ 
+
+ <footer>
+
+ <div class ="info">all mager malawian radio station ready for.Easy to use and 
+ 100% free.</div>
+ <div class="naruto">
+ <div class="station">
+ <h1>Top 5</h1>
+ <ul>
+<li><a href="#">94.7</a></li>
+<li><a href="#">jacara</a></li>
+ <li><a href="#">702</a></li>
+<li><a href="#">club</a></li>
+ <li><a href="#">radio 5 fm</a></li>
+ <li><a href="#">kfm</a></li>
+ </ul>
+ </div>
+<div class="social-icons">
+<h2>About</h2>
+   <media>
+      <a href="https://facebook.com" target="_blank">🌐 Facebook</a><br>
+      <a href="https://wa.me/1234567890" target="_blank">📱 WhatsApp</a><br>
+      <a href="https://instagram.com" target="_blank">📷 Instagram</a><br>
+	  <a href="https://instagram.com" target="_blank">🐦 Twitter</a>
+	  </media>
+	  </div>
+  <div class="genres">
+  <h3>most listened strem</h3>
+  <ul>
+  <li><a href="#">94.7</a></li>
+  <li><a href="#">jacara</a></li>
+   <li><a href="#">702</a></li>
+  <li><a href="#">jkl</a></li>
+   <li><a href="#">kkj radio 5 fm</a></li>
+  <li><a href="#">kfm</a></li>
+  </ul>
+  </div>
+  </div>
+  </footer>
+ 
+
+  <div class="fm">
+  <iframe class="frame3"
+  src="https://onlineradiobox.com/mw/timvenionline/player/" 
+  width="440" 
+  height="125"
+  frameborder="0"
+  allow="autoplay">
+</iframe>
+
+
+<iframe class="frame4"
+  src="https://radioly.app/radio/zodiak-radio?embed"
+  width="440"
+  height="125"
+  frameborder="0"
+  allow="autoplay">
+</iframe>
+
+<iframe class="frame5"
+  src="https://onlineradiobox.com/mw/uwala/"
+
+  width="440"
+  height="125"
+  frameborder="0"
+  allow="autoplay">
+</iframe>
+
+<iframe class="frame6"
+  src="https://onlineradiobox.com/embed/?id=live&lang=lk&nocover=1"
+  width="440"
+  height="125"
+  frameborder="0"
+  style="border:none;"
+  allow="autoplay">
+</iframe>
+
+<iframe class="frame7"
+  src="https://raddio.net/1953-radio-maria-malawi/"
+  width="440"
+  height="125"
+  frameborder="0"
+  style="border:none;"
+  allow="autoplay">
+  </iframe>
+  
+  <iframe class="frame8"
+  src="https://onlineradiobox.com/mw/mudziwathu/"
+  width="440"
+  height="125"
+  frameborder="0"
+  style="border:none;"
+  allow="autoplay">
+</iframe>
+
+
+<iframe class="frame9"
+  src="https://onlineradiobox.com/mw/tuntufye/"
+  width="440"
+  height="125"
+  frameborder="0"
+  style="border:none;"
+  allow="autoplay"
+></iframe> 
+
+ <audio  class="player" controls>
+  <source src="https://node.stream-africa.com:8443/CapitalFM" type="audio/mpeg">
+</audio>
+
+<iframe class="frame10"
+  src="https://onlineradiobox.com/mw/mulanje/"
+  width="440"
+  height="125"
+  frameborder="0"
+  style="border:none;"
+  allow="autoplay"
+    style="
+    position: fixed;
+    bottom: 0;
+    left: 70%;
+    transform: translateX(-50%);
+    max-width: 95%;
+    z-index: 999;
+  "></iframe>
+  
+<script>
+/* 
+   BACKGROUND SLIDER
+ */
+let images = [
+  'flag-2.jpg',
+  'music.jpg',
+  'mark.jpg',
+  'malawi02.jpg',
+  'music02.jpg',
+  'music03.jpg',
+  'top10.jpg'
+];
+
+let index = 0;
+let root = document.documentElement;
+
+function changeBackground() {
+  root.style.setProperty("--slide-image", "url('" + images[index] + "')");
+  index++;
+  if (index >= images.length) index = 0;
+}
+
+changeBackground();
+setInterval(changeBackground, 13000);
+
+/* 
+   RADIO SYSTEM
+ */
+document.addEventListener("DOMContentLoaded", function () {
+
+  const boxes = document.querySelectorAll(".box div");
+  const frames = document.querySelectorAll(".fm iframe");
+  const audioPlayer = document.querySelector(".player");
+  const bigBox = document.querySelector(".box6");
+  const searchInput = document.querySelector(".search");
+
+  let currentFrame = null;
+  let deferredPrompt;
+
+  // Floating message
+  const message = document.createElement("div");
+  message.style.position = "fixed";
+  message.style.top = "20px";
+  message.style.left = "50%";
+  message.style.transform = "translateX(-50%)";
+  message.style.background = "black";
+  message.style.color = "white";
+  message.style.padding = "10px 20px";
+  message.style.borderRadius = "10px";
+  message.style.display = "none";
+  message.style.zIndex = "9999";
+  document.body.appendChild(message);
+
+  function showMessage(text) {
+    message.innerText = text;
+    message.style.display = "block";
+    setTimeout(() => message.style.display = "none", 2000);
+  }
+
+  // Loader
+  const loader = document.createElement("div");
+  loader.style.position = "fixed";
+  loader.style.top = "50%";
+  loader.style.left = "50%";
+  loader.style.transform = "translate(-50%,-50%)";
+  loader.style.width = "60px";
+  loader.style.height = "60px";
+  loader.style.border = "6px solid #ccc";
+  loader.style.borderTop = "6px solid lime";
+  loader.style.borderRadius = "50%";
+  loader.style.animation = "spin 1s linear infinite";
+  loader.style.display = "none";
+  loader.style.zIndex = "9998";
+  document.body.appendChild(loader);
+
+  const style = document.createElement("style");
+  style.innerHTML = `
+    @keyframes spin {
+      0% { transform: translate(-50%,-50%) rotate(0deg); }
+      100% { transform: translate(-50%,-50%) rotate(360deg); }
+    }
+  `;
+  document.head.appendChild(style);
+
+  function showLoader(){ loader.style.display="block"; }
+  function hideLoader(){ loader.style.display="none"; }
+
+  // Stop previous player
+  function stopPrevious() {
+    if (currentFrame) currentFrame.src = currentFrame.src;
+    if (audioPlayer) {
+      audioPlayer.pause();
+      audioPlayer.currentTime = 0;
+    }
+  }
+
+  function hideAll() {
+    frames.forEach(f => {
+      f.style.visibility = "hidden";
+      f.style.pointerEvents = "none";
+    });
+    if (audioPlayer) audioPlayer.style.visibility = "hidden";
+    currentFrame = null;
+  }
+
+  // LIVE label
+  function removePlaying() {
+    document.querySelectorAll(".live-label").forEach(el => el.remove());
+  }
+
+  function addPlaying(box) {
+    const label = document.createElement("div");
+    label.className = "live-label";
+    label.innerText = "🔴 LIVE";
+    label.style.position = "absolute";
+    label.style.bottom = "5px";
+    label.style.background = "red";
+    label.style.color = "white";
+    label.style.fontSize = "12px";
+    label.style.padding = "2px 6px";
+    label.style.borderRadius = "5px";
+    box.appendChild(label);
+  }
+
+  // Show station
+  function showStation(frameIndex, boxIndex) {
+    stopPrevious();
+    hideAll();
+    removePlaying();
+
+    const frame = frames[frameIndex];
+    if (!frame) {
+      showMessage("try again");
+      return;
+    }
+
+    showLoader();
+
+    frame.style.visibility = "visible";
+    frame.style.pointerEvents = "auto";
+    currentFrame = frame;
+
+    const bg = window.getComputedStyle(boxes[boxIndex]).backgroundImage;
+    bigBox.style.setProperty("--slide-image", bg);
+
+    addPlaying(boxes[boxIndex]);
+
+    frame.scrollIntoView({behavior:"smooth", block:"center"});
+
+    let loaded = false;
+
+    frame.onload = function(){
+      loaded = true;
+      hideLoader();
+    };
+
+    setTimeout(()=>{
+      if(!loaded){
+        hideLoader();
+        showMessage("Stream may not be available");
+      }
+    },5000);
+  }
+
+  // Station map
+  const stationMap = {
+    0:1,1:2,2:5,3:3,4:4,5:0,6:6,7:7,8:8,
+    11:8,12:6,13:5,14:4,15:3,16:6,17:2,18:5,19:0
+  };
+
+  boxes.forEach((box,index)=>{
+    box.addEventListener("click",()=> {
+      if(stationMap[index] !== undefined) showStation(stationMap[index],index);
+      else showMessage("try again");
+    });
+  });
+
+  // Search filter
+  if(searchInput){
+    searchInput.addEventListener("input",function(){
+      const value = this.value.toLowerCase();
+      boxes.forEach(box=>{
+        const bg = box.style.backgroundImage || "";
+        box.style.display = bg.toLowerCase().includes(value) ? "flex":"none";
+      });
+    });
+  }
+
+  // PWA install button
+  window.addEventListener("beforeinstallprompt", (e)=>{
+    e.preventDefault();
+    deferredPrompt = e;
+
+    const installBtn = document.createElement("button");
+    installBtn.innerText="Install App";
+    installBtn.style.position="fixed";
+    installBtn.style.bottom="20px";
+    installBtn.style.right="20px";
+    installBtn.style.padding="10px 20px";
+    installBtn.style.background="green";
+    installBtn.style.color="white";
+    installBtn.style.border="none";
+    installBtn.style.borderRadius="10px";
+    installBtn.style.cursor="pointer";
+    document.body.appendChild(installBtn);
+
+    installBtn.addEventListener("click", async ()=>{
+      if(deferredPrompt){
+        deferredPrompt.prompt();
+        const choiceResult = await deferredPrompt.userChoice;
+        if(choiceResult.outcome==="accepted") showMessage("App installed!");
+        else showMessage("App installation declined");
+        deferredPrompt = null;
+        installBtn.remove();
+      }
+    });
+  });
+
+});
+</script>
+
+</body>
+</html>ir you sent
